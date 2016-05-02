@@ -11,7 +11,7 @@ Steps:
 - Go to cloned directory: `cd lightning-example`
 - Run JMeter tests with jmeter-maven-plugin: `mvn clean verify`. JMeter test results will be saved to `target/jmeter/results/example.csv`
 - Run Lightning: `java -jar bin/lightning-standalone-3.0.0.jar verify -xml src/test/resources/lightning.xml --jmeter-csv target/jmeter/results/example.csv`.
-- You should get output similar to this:
+- You should get console output similar to this:
 
 ```
 Test name:            JMeter home page - average response time
@@ -46,7 +46,8 @@ Execution time:    77ms
 JUnit XML report will be saved to `reports/junit.xml`:
 
 ```
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Lightning" tests="2" time="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="Lightning" tests="2" time="0">
     <testcase name="JMeter home page - average response time" time="0"/>
     <testcase name="JMeter home page - failed tests" time="0"/>
 </testsuite>
