@@ -10,7 +10,7 @@ Steps:
 - Clone this repo: `git clone https://github.com/automatictester/lightning-example.git`
 - Go to cloned directory: `cd lightning-example`
 - Run JMeter tests with jmeter-maven-plugin: `mvn clean verify`. JMeter test results will be saved to `target/jmeter/results/example.csv`
-- Run Lightning: `java -jar bin/lightning-standalone-3.0.0.jar verify -xml src/test/resources/lightning.xml --jmeter-csv target/jmeter/results/example.csv`.
+- Run Lightning: `java -jar bin/lightning-standalone-5.0.0.jar verify -xml src/test/resources/lightning.xml --jmeter-csv target/jmeter/results/example.csv`.
 - You should get console output similar to this:
 
 ```
@@ -43,7 +43,7 @@ Execution time:    77ms
 ##teamcity[buildStatisticValue key='JMeter home page - failed tests' value='0']
 ```
 
-JUnit XML report will be saved to `reports/junit.xml`:
+JUnit XML report will be saved to `junit.xml`:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,10 +53,10 @@ JUnit XML report will be saved to `reports/junit.xml`:
 </testsuite>
 ```
 
-Properties file for Jenkins Build Name Setter plugin will be saved to `reports/lightning-jenkins.properties`:
+Properties file for Jenkins Build Name Setter plugin will be saved to `lightning-jenkins.properties`:
 
 ```
-#In Jenkins Build Name Setter Plugin, define build name as: ${PROPFILE,file="reports/lightning-jenkins.properties",property="result.string"}
+#In Jenkins Build Name Setter Plugin, define build name as: ${PROPFILE,file="lightning-jenkins.properties",property="result.string"}
 #Mon May 02 19:08:52 BST 2016
 result.string=Tests executed\: 2, failed\: 0
 ```

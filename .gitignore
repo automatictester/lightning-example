@@ -1,4 +1,5 @@
-reports/
 target/
 .idea/
 *.iml
+junit.xml
+lightning-jenkins.properties
